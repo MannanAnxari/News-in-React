@@ -1,38 +1,145 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.925rem;
+  background-color: #006bbe29;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+nav {
+  background: #0082e6;
+  height: 80px;
+  width: 100%;
+}
+
+.logo {
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+
+.logo:hover {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+nav ul {
+  float: right;
+  margin-right: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+nav ul {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul  a {
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+ul a.active,
+ul a:hover {
+  background: #1b9bff;
+  color: white;
+  transition: .5s;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
   }
-  to {
-    transform: rotate(360deg);
+
+  nav ul   a {
+    font-size: 16px;
   }
+}
+
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+
+  nav ul a{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  nav ul a {
+    font-size: 20px;
+  }
+
+  a:hover,
+  a.active {
+    background: none;
+    color: #0082e6;
+  }
+
+  #check:checked~ul {
+    left: 0;
+  }
+}
+.card img{
+  height: 13rem;
+
+}
+.card{
+  /* overflow: hidden; */
+  border-radius: 1rem;
+  box-shadow: 4px 11px 20px 2px #0000005c;
+  transition: .3s;
+  cursor: pointer;
+  user-select: none;
+
+}
+.card:hover{
+  transform: scale(1.02);
+}
+.progress{
+  width: 100%;
+  height: 5px;
+  float: left;
 }
