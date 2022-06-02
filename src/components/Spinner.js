@@ -1,16 +1,18 @@
 import React, { Component } from 'react'
 import loading from "./loading.gif"
 
-export default class Spinner extends Component {
-    render() {
+const Spinner = () => {
+ 
         let spinnerStyle = {
             // backgroundColor: "red",
-            width: "90%",
-            opacity: "0.5"
+            width: "40%",
+            opacity: "0.5",
+            marginBottom: "2rem"
         }
 
         return (
             <div className='text-center'><img style={spinnerStyle} src={loading} alt="loading" /></div>
-        )
-    }
+     )
+    
 }
+export default Spinner
